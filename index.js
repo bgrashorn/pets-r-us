@@ -8,42 +8,38 @@
 */
 
 // Imports
-const { application } = require('express')
-const express = require('express')
-const app = express()
-const port = 3000
+const express = require('express');
+const path = require('path');
 
+const app = express();
 
-// Static Files
-app.use(express.static('public'))
-app.use('/css', express.static(__dirname + 'public/css'))
-app.use('/js', express.static(__dirname + 'public/js'))
-app.use('/img', express.static(__dirname + 'public/img'))
+// Set Views
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 
+app.use(express.static(path.join(__dirname, 'public')));
 
-//Set Views
-app.set('views', './views')
-app.set('view engine', 'ejs')
+const PORT = process.env.PORT || 3000;
 
-
-app.get('', (req, res) => {
+app.get('/', (req, res) => {
     res.render('index', {
         title: 'Pets-R-Us: Landing',
         pageTitle: 'Landing Page'
     })
 });
 
-app.get('./grooming', (req, res) => {
+app.get('/grooming', (req, res) => {
     res.render('grooming', {
-        title: 'Pets-R-Us: Grooming',
-        pageTitle: 'Grooming'
+        title: 'Grooming Page',
+        pageTitle: 'Grooming Page'
     })
 });
 
 
 
 
-
 // Listen on Port 3000
-app.listen(port, () => console.info(`Listening on port ${port}`))
+app.listen(PORT, () => {
+    console.log('Application started and listening on PORT ' + PORT);
+});
 
