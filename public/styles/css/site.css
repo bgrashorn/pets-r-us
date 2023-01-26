@@ -1,0 +1,62 @@
+/* Header Section */
+.nav-bar {
+    padding: 0 20px 20px;
+}
+
+.nav-bar li {
+    display: inline;
+    padding: 15px;
+    font-size: 24px;
+    float: right;
+}
+
+.nav-bar a {
+    color: black;
+}
+
+/* Banner Section */
+.banner-div {
+    text-align: center;
+}
+
+.banner-header {
+    font-size: 48px;
+    
+}
+
+.pet-banner {
+    width: 100%;
+}
+
+/* Sections */
+
+.info, .hours, .featured-pet, .testimonials, .contact {
+    text-align: center;
+}
+
+/* Featured Pet Section */
+
+.featured-pet-content {
+    display: grid;
+    
+}
+
+.featured-pet-bio {
+    width: 30%;
+    text-align: left;
+   
+    
+}
+
+.featured-pet-photo {
+    width: 200px;
+    border-radius: 100px;
+    
+}
+
+
+/* Footer Section */
+footer {
+    float: right;
+    padding-right: 15px;
+}

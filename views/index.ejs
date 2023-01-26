@@ -6,20 +6,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= title %></title>
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="./styles/site.css" />
+    <link rel="stylesheet" href="styles/css/site.css" />
   </head>
   <body>
     <header>
-      <div class="nav">
-        <ul>
-          <li>Services</li>
-          <li>Customers</li>
-          <li>Booking</li>
-          <li>My Appointments</li>
-        </ul>
-        <h1>Pets-R-Us</h1>
-        <h2>Every pets dream</h2>
-      </div>
+      <nav>
+        <div class="nav-bar">
+          <ul>
+            <li><a href="">My Appointments</a></li>
+            <li><a href="">Booking</a></li>
+            <li><a href="">Customers</a></li>
+            <li><a href="">Services</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
+    <section class="banner">
+      <div class="banner-div">
+        <h1 class="banner-header">Pets-R-Us</h1>
+        <h2 class="slogan-text">Every pets dream</h2>
+        <img class="pet-banner" src="images\pets-lineup.jpg" alt="Pets" />
+      </div>
+      <hr />
+    </section>
+    <section class="info">
+      <h2>What We Do</h2>
+      <p>
+        Here at Pets-R-Us, we promise to provide the best care and service for
+        you and your furry friend. We offer many services to provide the best
+        life for you and your pets. Alongside bountiful choices of toys, food,
+        furniture and more, we offer grooming, boarding and training for your
+        best friend.
+      </p>
+      <img src="" alt="" />
+      <hr />
+    </section>
+
+    <section class="hours">
+      <h2>Store Hours</h2>
+      <div class="card"></div>
+      <hr />
+    </section>
+
+    <section class="featured-pet">
+      <h2>Featured Pet</h2>
+      <div class="featured-pet-content">
+        <div>
+          <p class="featured-pet-bio">
+            Bella is a 2 year old Tuxedo Cat that lives in Omaha. She loves
+            playing with her owner and is a big fan of teaser toys. She acts
+            tough around others but when she is with her favorite humans she is
+            a big cuddle bug.
+          </p>
+        </div>
+        <div>
+          <img
+            class="featured-pet-photo"
+            src="images\bella-lay-modified.png"
+            alt="Featured Pet Bella"
+          />
+        </div>
+
+        <hr />
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <h2>Testimonials</h2>
+      <p class="quote"></p>
+      <p class="author"></p>
+      <p class="quote"></p>
+      <p class="author"></p>
+      <p class="quote"></p>
+      <p class="author"></p>
+      <hr />
+    </section>
+
+    <section class="contact">
+      <h2>Contact Us</h2>
+      <form action=""></form>
+    </section>
+    <footer>
+      <p>
+        &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        Brett Grashorn -
+        <a href="https://www.bellevue.edu/">Bellevue University</a>
+      </p>
+    </footer>
   </body>
 </html>
