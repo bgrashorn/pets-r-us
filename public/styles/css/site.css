@@ -1,3 +1,28 @@
+body {
+    font-family: 'Arvo', serif;
+}
+
+section {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+h2 {
+    color: #456990;
+    font-size: 32px;
+    padding-bottom: 30px;
+}
+
+p {
+    color: #456990;
+}
+
+hr {
+    margin: auto;
+    width: 10%;
+    border: 2px solid #456990;
+    border-radius: 3px;
+}
 /* Header Section */
 .nav-bar {
     padding: 0 20px 20px;
@@ -11,7 +36,7 @@
 }
 
 .nav-bar a {
-    color: black;
+    color: #456990;
 }
 
 /* Banner Section */
@@ -20,8 +45,13 @@
 }
 
 .banner-header {
-    font-size: 48px;
-    
+    font-size: 64px;
+    color: #456990;
+}
+
+.slogan-text {
+    color: #456990;
+    font-size: 28px;
 }
 
 .pet-banner {
@@ -30,33 +60,165 @@
 
 /* Sections */
 
-.info, .hours, .featured-pet, .testimonials, .contact {
+.info, .hours, .featured-pet, .testimonials, .contact, .grooming-info, .pricing {
     text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+/* What We Do Section */
+.info-content {
+    display: grid;
+    width: 40%;
+    margin: auto;
+}
+
+.info-photo {
+    width: 200px;
+    float: left;
+}
+
+.info-paragraph {
+    width: 50%;
+    text-align: left;
+    float: right;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.info {
+    height: fit-content;
+    background-color: #E4FDE1;
+}
+
+/* Hours Section */
+.hours-content {
+    display: grid;
+    width: 40%;
+    margin: auto;
+}
+
+.hours-photo {
+    width: 200px;
+    float: right;
+}
+
+li {
+    list-style-type: none;
+}
+
+.card {
+    display: block;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    width: 45%;
+    float: left;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.card-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #456990;
+}
+
+.card-content {
+    text-align: center;
+    padding-right: 35px;
+    color: #456990;
 }
 
 /* Featured Pet Section */
 
+.featured-pet {
+    background-color: #E4FDE1;
+}
+
 .featured-pet-content {
     display: grid;
+    width: 40%;
+    margin: auto;
     
 }
 
 .featured-pet-bio {
-    width: 30%;
+    width: 50%;
     text-align: left;
-   
-    
+    float: right;
+    font-size: 18px;
+    line-height: 30px;
 }
 
 .featured-pet-photo {
     width: 200px;
     border-radius: 100px;
+    float: left;
     
 }
 
+/* Contact Seciton */
+.contact {
+    background-color: #E4FDE1;
+}
+
+/* Testimonials Section */
+.testimonial-content {
+    width: 40%;
+    margin: auto;
+}
+
+.testimonial-content p {
+    font-size: 18px;
+}
 
 /* Footer Section */
 footer {
     float: right;
     padding-right: 15px;
+    background-color: #E4FDE1;
+    padding-left: 80%;
+    
 }
+
+/* Grooming Page */
+.grooming-info {
+    background-color: #E4FDE1;
+}
+
+.grooming-content {
+    width: 40%;
+    margin: auto;
+    padding-bottom: 225px;
+}
+
+.grooming-paragraph {
+    width: 50%;
+    text-align: left;
+    float: right;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.grooming-photo {
+    width: 100px;
+    border-radius: 100px;
+    float: left;
+}
+
+.pricing {
+    padding-bottom: 250px;
+}
+
+.pricing-content {
+    width: 40%;
+    margin: auto;
+}
+
+.pricing-photo {
+    width: 100px;
+    border-radius: 100px;
+    float: right;
+}
+

@@ -7,10 +7,17 @@
     <title><%= title %></title>
     <!-- Stylesheet -->
     <link rel="stylesheet" href="styles/css/site.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
-      <nav>
+      <div class="nav">
         <div class="nav-bar">
           <ul>
             <li><a href="">My Appointments</a></li>
@@ -19,35 +26,56 @@
             <li><a href="">Services</a></li>
           </ul>
         </div>
-      </nav>
+      </div>
     </header>
+
     <section class="banner">
       <div class="banner-div">
         <h1 class="banner-header">Pets-R-Us</h1>
-        <h2 class="slogan-text">Every pets dream</h2>
+        <h3 class="slogan-text">Every pets dream</h3>
         <img class="pet-banner" src="images\pets-lineup.jpg" alt="Pets" />
       </div>
-      <hr />
     </section>
+
     <section class="info">
       <h2>What We Do</h2>
-      <p>
-        Here at Pets-R-Us, we promise to provide the best care and service for
-        you and your furry friend. We offer many services to provide the best
-        life for you and your pets. Alongside bountiful choices of toys, food,
-        furniture and more, we offer grooming, boarding and training for your
-        best friend.
-      </p>
-      <img src="" alt="" />
-      <hr />
+      <div class="info-content">
+        <div>
+          <p class="info-paragraph">
+            Here at Pets-R-Us, we promise to provide the best care and service
+            for you and your furry friend. We offer many services to provide the
+            best life for you and your pets. Alongside bountiful choices of
+            toys, food, furniture and more, we offer grooming, boarding and
+            training for your best friend.
+          </p>
+          <img class="info-photo" src="images\willow.PNG" alt="Dog" />
+        </div>
+      </div>
     </section>
-
+    <hr />
     <section class="hours">
       <h2>Store Hours</h2>
-      <div class="card"></div>
-      <hr />
+      <div class="hours-content">
+        <div>
+          <div class="card">
+            <div class="card-title">Store Hours</div>
+            <div class="card-content">
+              <ul>
+                <li>Monday 8:00 AM - 8:00 PM</li>
+                <li>Tuesday 8:00 AM - 8:00 PM</li>
+                <li>Wednesday 8:00 AM - 8:00 PM</li>
+                <li>Thursday 8:00 AM - 8:00 PM</li>
+                <li>Friday 8:00 AM - 8:00 PM</li>
+                <li>Saturday 8:00 AM - 6:00 PM</li>
+                <li>Sunday 8:00 AM - 4:00 PM</li>
+              </ul>
+            </div>
+          </div>
+          <img class="hours-photo" src="images\bentley.PNG" alt="Dog" />
+        </div>
+      </div>
     </section>
-
+    <hr />
     <section class="featured-pet">
       <h2>Featured Pet</h2>
       <div class="featured-pet-content">
@@ -58,33 +86,46 @@
             tough around others but when she is with her favorite humans she is
             a big cuddle bug.
           </p>
-        </div>
-        <div>
           <img
             class="featured-pet-photo"
             src="images\bella-lay-modified.png"
             alt="Featured Pet Bella"
           />
         </div>
-
-        <hr />
       </div>
     </section>
-
+    <hr />
     <section class="testimonials">
       <h2>Testimonials</h2>
-      <p class="quote"></p>
-      <p class="author"></p>
-      <p class="quote"></p>
-      <p class="author"></p>
-      <p class="quote"></p>
-      <p class="author"></p>
-      <hr />
+      <div class="testimonial-content">
+        <p class="quote">
+          Me and my cat are so happy with the excellent service we received at
+          Pets=R-Us. The employees were all so nice and the selection was
+          endless!
+        </p>
+        <p class="author">- Lexi</p>
+        <p class="quote">
+          Pets-R-Us is exactly what me and my pets needed. They have everything
+          from toys and food to grooming and training. We will definitely be
+          coming back very often!
+        </p>
+        <p class="author">- Bobby</p>
+        <p class="quote">
+          I need extra help when grooming my St. Bernard. Pets-R-Us did an
+          excellent job and made the experience so much fun for my Walter. This
+          is definitely my go-to place from now on.
+        </p>
+        <p class="author">- Zach</p>
+      </div>
     </section>
-
+    <hr />
     <section class="contact">
       <h2>Contact Us</h2>
-      <form action=""></form>
+      <p>For more info please enter your email address.</p>
+      <form>
+        <input type="email" placeholder="Email" />
+        <a href="" class="btn btn-primary">Send</a>
+      </form>
     </section>
     <footer>
       <p>

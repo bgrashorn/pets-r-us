@@ -27,15 +27,15 @@ const PORT = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
     res.render('index', {
-        title: 'Pets-R-Us: Landing',
+        title: 'Pets-R-Us: Home',
         pageTitle: 'Landing Page'
     })
 });
 
 app.get('/grooming', (req, res) => {
     res.render('grooming', {
-        title: 'Grooming Page',
-        pageTitle: 'Grooming Page'
+        title: 'Pets-R-Us: Grooming',
+        pageTitle: 'Pets-R-Us: Grooming'
     })
 });
 

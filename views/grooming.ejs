@@ -7,8 +7,78 @@
     <title><%= title %></title>
     <!-- Stylesheet -->
     <link rel="stylesheet" href="styles/css/site.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h1>Hello World</h1>
+    <header>
+      <nav>
+        <div class="nav-bar">
+          <ul>
+            <li><a href="">My Appointments</a></li>
+            <li><a href="">Booking</a></li>
+            <li><a href="">Customers</a></li>
+            <li><a href="">Services</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <section class="banner">
+      <div class="banner-div">
+        <h1 class="banner-header">Pets-R-Us</h1>
+        <h2 class="slogan-text">Every pets dream</h2>
+        <img class="pet-banner" src="images\pets-lineup.jpg" alt="Pets" />
+      </div>
+    </section>
+
+    <section class="grooming-info">
+      <h2>Grooming</h2>
+      <div class="grooming-content">
+        <div>
+          <p class="grooming-paragraph">
+            Here at Pets-R-Us we offer grooming for pets of all sizes and fur
+            types. Depending on the package you choose we will help your pet
+            feel fresh with nail clipping, teeth brushing, hair cuts and every
+            package comes with a free bath.
+          </p>
+          <img class="grooming-photo" src="images\walter.PNG" alt="Walter" />
+        </div>
+      </div>
+    </section>
+    <hr />
+    <section class="pricing">
+      <h2>Pricing</h2>
+      <div class="pricing-content">
+        <div>
+          <div class="card">
+            <div class="card-title">Pricing</div>
+            <div class="card-content">
+              <ul>
+                <li>Packages: $25-$50</li>
+                <li>Haircuts: $10</li>
+                <li>Teeth Brushing: $15</li>
+                <li>Nail Clipping: $20</li>
+              </ul>
+            </div>
+          </div>
+          <img class="pricing-photo" src="images\walter.PNG" alt="Dog" />
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p>
+        &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        Brett Grashorn -
+        <a href="https://www.bellevue.edu/">Bellevue University</a>
+      </p>
+    </footer>
   </body>
 </html>
