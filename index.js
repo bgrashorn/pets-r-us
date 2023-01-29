@@ -22,7 +22,7 @@ app.use(express.static(path.join(__dirname, 'public/styles')));
 app.use(express.static(path.join(__dirname, 'public/images')));
 
 
-
+// Set PORT to 3000
 const PORT = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
