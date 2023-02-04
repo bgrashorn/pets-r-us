@@ -39,8 +39,19 @@ app.get('/grooming', (req, res) => {
     })
 });
 
+app.get('/boarding', (req, res) => {
+    res.render('boarding', {
+        title: 'Pets-R-Us: Boarding',
+        pageTitle: 'Pets-R-Us: Boarding'
+    })
+});
 
-
+app.get('/training', (req, res) => {
+    res.render('training', {
+        title: 'Pets-R-Us: Training',
+        pageTitle: 'Pets-R-Us: Training'
+    })
+});
 
 // Listen on Port 3000
 app.listen(PORT, () => {

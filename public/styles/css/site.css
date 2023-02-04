@@ -1,3 +1,13 @@
+/* 
+======================================
+; Title: site.css
+; Author: Brett Grashorn
+; Date: 4 Feb 2023
+; Description: This is the main styling sheet for the pets-r-us project
+; Sources Used: N/A
+;==================================== 
+*/
+
 body {
     font-family: 'Arvo', serif;
 }
@@ -51,18 +61,30 @@ hr {
     color: #456990;
 }
 
+.banner-header a {
+    text-decoration: none;
+    color: #456990;
+}
+
+.banner-header a:hover {
+    text-decoration: none;
+    color: #E4FDE1;
+}
+
+
 .slogan-text {
     color: #456990;
     font-size: 28px;
 }
 
 .pet-banner {
-    width: 100%;
+    width: 85%;
+    
 }
 
 /* Sections */
 
-.info, .hours, .featured-pet, .testimonials, .contact, .grooming-info, .pricing {
+.info, .hours, .featured-pet, .testimonials, .contact, .grooming-info, .pricing, .training-info, .boarding-info {
     text-align: center;
     padding-top: 60px;
     padding-bottom: 60px;
@@ -224,6 +246,54 @@ footer {
     float: right;
 }
 
-.grooming-footer {
-    background-color: white;
+/* Training Section */
+.training-info {
+    background-color: #E4FDE1;
+}
+
+.training-content {
+    width: 40%;
+    margin: auto;
+    padding-bottom: 225px;
+    
+}
+
+.training-paragraph {
+    width: 50%;
+    text-align: left;
+    float: right;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.training-photo {
+    width: 100px;
+    border-radius: 100px;
+    float: left;
+}
+
+/* Boarding Section */
+.boarding-info {
+    background-color: #E4FDE1;
+}
+
+.boarding-content {
+    width: 40%;
+    margin: auto;
+    padding-bottom: 225px;
+    
+}
+
+.boarding-paragraph {
+    width: 50%;
+    text-align: left;
+    float: right;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.boarding-photo {
+    width: 100px;
+    border-radius: 100px;
+    float: left;
 }

@@ -1,9 +1,9 @@
 <!--
 ======================================
-; Title: grooming.ejs 
+; Title: boarding.ejs 
 ; Author: Brett Grashorn
 ; Date: 4 Feb 2023
-; Description: This code has the code for the pets-r-us grooming page
+; Description: This code has the code for the pets-r-us boarding page
 ; Sources Used: N/A
 ;====================================
 -->
@@ -25,20 +25,20 @@
     />
   </head>
   <body>
-    <!-- Header Partial -->
+    <!-- Adds Header Partial -->
     <%- include('_header.ejs') %>
-    <!-- Grooming Section -->
-    <section class="grooming-info">
-      <h2>Grooming</h2>
-      <div class="grooming-content">
+    <!-- Boarding Section -->
+    <section class="boarding-info">
+      <h2>Boarding</h2>
+      <div class="boarding-content">
         <div>
-          <p class="grooming-paragraph">
+          <p class="boarding-paragraph">
             Here at Pets-R-Us we offer grooming for pets of all sizes and fur
             types. Depending on the package you choose we will help your pet
             feel fresh with nail clipping, teeth brushing, hair cuts and every
             package comes with a free bath.
           </p>
-          <img class="grooming-photo" src="images\walter.PNG" alt="Walter" />
+          <img class="boarding-photo" src="images\walter.PNG" alt="Walter" />
         </div>
       </div>
     </section>
@@ -53,10 +53,10 @@
             <div class="card-title">Pricing</div>
             <div class="card-content">
               <ul>
-                <li>Packages: $25-$50</li>
-                <li>Haircuts: $10</li>
-                <li>Teeth Brushing: $15</li>
-                <li>Nail Clipping: $20</li>
+                <li>Big Dogs: $150</li>
+                <li>Small Dogs: $100</li>
+                <li>Cats: $50</li>
+                <li>Other: $25-$200</li>
               </ul>
             </div>
           </div>
@@ -64,7 +64,7 @@
         </div>
       </div>
     </section>
-    <!-- Footer Partial -->
+    <!-- Adds Footer Partial -->
     <%- include('_footer.ejs') %>
   </body>
 </html>

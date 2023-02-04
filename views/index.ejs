@@ -1,3 +1,12 @@
+<!--
+======================================
+; Title: index.ejs 
+; Author: Brett Grashorn
+; Date: 4 Feb 2023
+; Description: This code has the code for the main pets-r-us index page
+; Sources Used: N/A
+;====================================
+-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,27 +25,8 @@
     />
   </head>
   <body>
-    <!-- Nav Bar Header -->
-    <header>
-      <div class="nav">
-        <div class="nav-bar">
-          <ul>
-            <li><a href="">My Appointments</a></li>
-            <li><a href="">Booking</a></li>
-            <li><a href="">Customers</a></li>
-            <li><a href="">Services</a></li>
-          </ul>
-        </div>
-      </div>
-    </header>
-    <!-- Top Banner and Title -->
-    <section class="banner">
-      <div class="banner-div">
-        <h1 class="banner-header">Pets-R-Us</h1>
-        <h3 class="slogan-text">Every pets dream</h3>
-        <img class="pet-banner" src="images\pets-lineup.jpg" alt="Pets" />
-      </div>
-    </section>
+    <!-- Adds Header Partial -->
+    <%- include('_header.ejs') %>
 
     <!-- Info Section -->
     <section class="info">
@@ -128,23 +118,14 @@
     <!-- Contact Us Section -->
     <section class="contact">
       <h2>Contact Us</h2>
-      <a href="grooming">Grooming</a>
+
       <p>For more info please enter your email address.</p>
       <form>
         <input type="email" placeholder="Email" />
         <a href="" class="btn btn-primary">Send</a>
       </form>
     </section>
-    <!-- Footer for all Pages -->
-    <footer>
-      <p>
-        &copy;
-        <script>
-          document.write(new Date().getFullYear());
-        </script>
-        Brett Grashorn -
-        <a href="https://www.bellevue.edu/">Bellevue University</a>
-      </p>
-    </footer>
+    <!-- Adds Footer Partial -->
+    <%- include('_footer.ejs') %>
   </body>
 </html>
