@@ -10,8 +10,11 @@
 // Imports
 const express = require('express');
 const path = require('path');
+const mongoose = require('mongoose');
 
 const app = express();
+
+
 
 // Set Views
 app.set('views', path.join(__dirname, './views'));
@@ -23,7 +26,14 @@ app.use(express.static(path.join(__dirname, 'public/images')));
 
 
 // Set PORT to 3000
+const CONN = 'mongodb+srv://web340_admin:web340admin@bellevueuniversity.3x5untt.mongodb.net'
 const PORT = process.env.PORT || 3000;
+
+// mongoose.connect(CONN).then(() => {
+//     console.log('Connection to MongoDB database was successful\n If you see this message it means you were able to connect to your MongoDB atlas cluster');
+// }).catch(err => {
+//     console.log('MongoDB error: ' = err.message);
+// })
 
 app.get('/', (req, res) => {
     res.render('index', {
@@ -50,6 +60,13 @@ app.get('/training', (req, res) => {
     res.render('training', {
         title: 'Pets-R-Us: Training',
         pageTitle: 'Pets-R-Us: Training'
+    })
+});
+
+app.get('/register', (req, res) => {
+    res.render('register', {
+        title: 'Pets-R-Us: Registration',
+        pageTitle: 'Pets-R-Us: Registration'
     })
 });
 

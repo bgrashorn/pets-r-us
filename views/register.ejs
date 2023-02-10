@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+  </head>
+  <body>
+    <!-- Adds Header Partial -->
+    <%- include('_header.ejs') %>
+
+    <!-- Registration Section -->
+    <section class="registration">
+      <!-- Creates card for Registration -->
+      <div>
+        <div class="register-card">
+          <div class="register-card-title">Register</div>
+          <div class="register-card-content">
+            <p>
+              Register for an account so you can access all the services we
+              offer and get notifications sent directly to you.
+            </p>
+            <input
+              type="text"
+              name="email"
+              id="email"
+              placeholder="sample@email.com"
+            />
+            <button>Register</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Adds Footer Partial -->
+    <%- include('_footer.ejs') %>
+  </body>
+</html>

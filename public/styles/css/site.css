@@ -11,6 +11,7 @@
 
 body {
     font-family: 'Arvo', serif;
+    margin: 0;
 }
 
 section {
@@ -85,7 +86,7 @@ hr {
 
 /* Sections */
 
-.info, .hours, .featured-pet, .testimonials, .contact, .grooming-info, .pricing, .training-info, .boarding-info {
+.info, .hours, .featured-pet, .testimonials, .contact, .grooming-info, .pricing, .training-info, .boarding-info, .registration {
     text-align: center;
     padding-top: 60px;
     padding-bottom: 60px;
@@ -199,12 +200,10 @@ li {
 }
 
 /* Footer Section */
-footer {
+
+footer p {
     float: right;
     padding-right: 15px;
-    background-color: #E4FDE1;
-    padding-left: 80%;
-    
 }
 
 /* Grooming Page */
@@ -297,4 +296,45 @@ footer {
     width: 100px;
     border-radius: 100px;
     float: left;
+}
+
+/* Register Section */
+.registration {
+    margin: auto;
+    
+    background-color: #E4FDE1;
+
+}
+
+.register-card {
+    display: block;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    width: 40%;
+    font-size: 16px;
+    line-height: 28px;
+    margin: auto;
+    background-color: #456990;
+    padding: 50px 0 100px;
+    border-radius: 10px;
+}
+
+.register-card-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #E4FDE1;
+    padding-bottom: 30px;
+}
+
+.register-card-content {
+    padding-top: 30px;
+    text-align: center;
+}
+
+.register-card-content p {
+    color: #E4FDE1;
+    padding-bottom: 20px;
+    width: 50%;
+    margin: auto;
 }
