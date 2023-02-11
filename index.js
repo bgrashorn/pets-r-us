@@ -16,17 +16,17 @@ const Customer = require('./models/customers');
 
 const app = express();
 
-const CONN = "mongodb+srv://web340admin:web340admin@bellevueuniversity.3x5untt.mongodb.net/web340DB";
+// Creates mongoose connection
+const CONN = "mongodb+srv://web340_admin:web340admin@bellevueuniversity.3x5untt.mongodb.net/web340DB";
 
-
-
+// Displays if mongoose is running or shows error message if not
 mongoose.connect(CONN).then(() => {
     console.log('Connection to MongoDB database was successful\n If you see this message it means you were able to connect to your MongoDB atlas cluster');
 }).catch(err => {
     console.log('MongoDB error: ' + err.message);
 })
 
-// Set Views
+// Set Views & Static files
 app.set('views', path.join(__dirname, './views'));
 app.set('view engine', 'ejs');
 
@@ -38,7 +38,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 
-// Set PORT to 3000
+// Set PORT to 4000
 const PORT = process.env.PORT || 4000;
 
 
@@ -77,14 +77,16 @@ app.get('/register', (req, res) => {
     })
 });
 
+
+// Post route
 app.post('/customers', (req, res, next) => {
     console.log(req.body);
     console.log(req.body.customerId);
     console.log(req.body.email);
     const newCustomer = new Customer({
         customerId: req.body.customerId,
-        email: req.body.email
-    })
+        email: req.body.email,
+    });
 
     console.log(newCustomer);
 
@@ -94,16 +96,17 @@ app.post('/customers', (req, res, next) => {
             next(err);
         } else {
             res.render('index', {
-                title: 'Pets-R-Us'
-            })
+                title: 'Pets-R-Us',
+                pageTitle: 'Landing Page'
+            });
         }
-    })
-})
+    });
+});
 
-// Listen on Port 3000
+// Listen on Port 4000
 app.listen(PORT, () => {
     console.log('Application started and listening on PORT ' + PORT);
 });
-// app.listen(PORT, () => console.info(`Listening on port ${PORT}`));
+
 
 

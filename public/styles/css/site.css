@@ -300,10 +300,8 @@ footer p {
 
 /* Register Section */
 .registration {
-    margin: auto;
-    
+    margin: auto;  
     background-color: #E4FDE1;
-
 }
 
 .register-card {
@@ -330,11 +328,43 @@ footer p {
 .register-card-content {
     padding-top: 30px;
     text-align: center;
+    
 }
 
 .register-card-content p {
     color: #E4FDE1;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
     width: 50%;
     margin: auto;
+    padding-right: 10px;
+    font-size: 20px;
+}
+
+.form-div {
+    padding: 10px;
+}
+
+.form-field {
+    height: 30px;
+    border-radius: 5px;
+    width: 40%; 
+}
+
+.register-button {
+    height: 40px;
+    border-radius: 5px;
+    color: black;
+    background-color: #E4FDE1;
+    font-family: 'Arvo', serif;
+    width: 20%;
+}
+
+.register-button:hover {
+    background-color: #456990;
+    color: white;
+}
+
+.id-div {
+    padding-right: 100px;
+    
 }

@@ -21,13 +21,31 @@
               Register for an account so you can access all the services we
               offer and get notifications sent directly to you.
             </p>
-            <input
-              type="text"
-              name="email"
-              id="email"
-              placeholder="sample@email.com"
-            />
-            <button>Register</button>
+            <div class="form-div id-div">
+              <form action="/customers" method="post">
+              <label for="customerId">Customer ID:</label>
+              <input
+                class="form-field"
+                type="text"
+                name="customerId"
+                id="customerId"
+                placeholder="customerID"
+                required autofocus
+              />
+            </div>
+            <div class="form-div">
+              <label for="email">Email:</label>
+              <input
+                class="form-field"
+                type="text"
+                name="email"
+                id="email"
+                placeholder="sample@email.com"
+              />
+            </div>
+            <div class="button-div">
+              <button class="register-button" type="submit" id="btnSubmit" value="Pets-R-Us Register">Register</button>
+            </div>
           </div>
         </div>
       </div>
@@ -35,5 +53,7 @@
 
     <!-- Adds Footer Partial -->
     <%- include('_footer.ejs') %>
+
+    <script type="module"></script>
   </body>
 </html>
