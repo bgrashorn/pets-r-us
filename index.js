@@ -12,9 +12,19 @@ const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
 
+const Customer = require('./models/customers');
+
 const app = express();
 
+const CONN = "mongodb+srv://web340admin:web340admin@bellevueuniversity.3x5untt.mongodb.net/web340DB";
 
+
+
+mongoose.connect(CONN).then(() => {
+    console.log('Connection to MongoDB database was successful\n If you see this message it means you were able to connect to your MongoDB atlas cluster');
+}).catch(err => {
+    console.log('MongoDB error: ' + err.message);
+})
 
 // Set Views
 app.set('views', path.join(__dirname, './views'));
@@ -24,16 +34,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public/styles')));
 app.use(express.static(path.join(__dirname, 'public/images')));
 
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 
 // Set PORT to 3000
-const CONN = 'mongodb+srv://web340_admin:web340admin@bellevueuniversity.3x5untt.mongodb.net'
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 
-// mongoose.connect(CONN).then(() => {
-//     console.log('Connection to MongoDB database was successful\n If you see this message it means you were able to connect to your MongoDB atlas cluster');
-// }).catch(err => {
-//     console.log('MongoDB error: ' = err.message);
-// })
 
 app.get('/', (req, res) => {
     res.render('index', {
@@ -70,8 +77,33 @@ app.get('/register', (req, res) => {
     })
 });
 
+app.post('/customers', (req, res, next) => {
+    console.log(req.body);
+    console.log(req.body.customerId);
+    console.log(req.body.email);
+    const newCustomer = new Customer({
+        customerId: req.body.customerId,
+        email: req.body.email
+    })
+
+    console.log(newCustomer);
+
+    Customer.create(newCustomer, function (err, customer) {
+        if (err) {
+            console.log(err);
+            next(err);
+        } else {
+            res.render('index', {
+                title: 'Pets-R-Us'
+            })
+        }
+    })
+})
+
 // Listen on Port 3000
 app.listen(PORT, () => {
     console.log('Application started and listening on PORT ' + PORT);
 });
+// app.listen(PORT, () => console.info(`Listening on port ${PORT}`));
+
 
