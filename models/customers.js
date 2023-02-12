@@ -1,3 +1,12 @@
+/*
+============================================
+; Title:  customers.js
+; Author: Brett Grashorn
+; Date:   12 February 2023
+; Description: Customers.js file for registration page. 
+;===========================================
+*/
+
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
