@@ -77,6 +77,12 @@ app.get('/register', (req, res) => {
     })
 });
 
+app.get('/customer-list', (req, res) => {
+    res.render('customer-list', {
+        title: 'Pets-R-Us: Customer List',
+        pageTitle: 'Pets-R-Us: Customer List'
+    })
+});
 
 // Post route
 app.post('/customers', (req, res, next) => {
@@ -102,6 +108,21 @@ app.post('/customers', (req, res, next) => {
         }
     });
 });
+
+app.get('/customers', (req, res) => {
+    Customer.find({}, function(err, customers) {
+        if (err) {
+            console.log(err);
+            next(err);
+        } else {
+            res.render('customer-list', {
+                title: 'Pets R Us: Customer List',
+                pageTitle: 'Our Customers',
+                customers: customers
+            })
+        }
+    })
+})
 
 // Listen on Port 4000
 app.listen(PORT, () => {
