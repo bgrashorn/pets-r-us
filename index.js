@@ -117,7 +117,7 @@ app.get('/customers', (req, res) => {
         } else {
             res.render('customer-list', {
                 title: 'Pets R Us: Customer List',
-                pageTitle: 'Our Customers',
+                pageTitle: 'Our Customers',            
                 customers: customers
             })
         }
