@@ -30,8 +30,8 @@
     <%- include('_header.ejs') %>
 
     <!-- Database Table -->
-    <section class="container">
-      <div class="card center-div">
+    <section class="container customers-section">
+      <div class="card customer-card">
         <div class="card-title">Customer List</div>
 
         <div class="card-content">
@@ -44,10 +44,8 @@
             <tbody>
               <% customers.forEach(function(customer) { %>
               <tr>
-                <td><%= customers.name %></td>
-                <td>
-                  <a href="#">DELETE</a>
-                </td>
+                <td><%= customer.customerId %></td>
+                <td><%= customer.email %></td>
               </tr>
               <% }) %>
             </tbody>
