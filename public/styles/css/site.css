@@ -140,6 +140,7 @@ li {
     float: left;
     font-size: 16px;
     line-height: 28px;
+    border-radius: 10px;
 }
 
 .card-title {
@@ -380,6 +381,7 @@ footer p {
 .customer-card {
     background-color: white;
     margin-left: 28%;
+    border-radius: 15px;
 }
 
 th {

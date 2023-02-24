@@ -1,0 +1,102 @@
+<!--
+======================================
+; Title: booking.ejs 
+; Author: Brett Grashorn
+; Date: 23 Feb 2023
+; Description: This code has the code for the pets-r-us booking page
+; Sources Used: WEB 200/231
+;====================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+  </head>
+  <body>
+    <!-- Adds Header Partial -->
+    <%- include('_header.ejs') %>
+
+    <section class="booking">
+      <div class="card booking-card">
+        <div class="booking-title">Booking</div>
+        <div class="card-content">
+          <div class="form">
+            <form action="/appointment" method="post">
+              <div class="form-field">
+                <label for="userName">User Name:</label><br />
+                <input
+                  type="text"
+                  class="input"
+                  name="userName"
+                  id="userName"
+                  required
+                  autofocus
+                />
+              </div>
+
+              <div class="form-field">
+                <label for="firstName">First Name:</label><br />
+                <input
+                  type="text"
+                  class="input"
+                  name="firstName"
+                  id="firstName"
+                  required
+                  autofocus
+                />
+              </div>
+
+              <div class="form-field">
+                <label for="lastName">Last Name:</label><br />
+                <input
+                  type="text"
+                  class="input"
+                  name="lastName"
+                  id="lastName"
+                  required
+                  autofocus
+                />
+              </div>
+
+              <div class="form-field">
+                <label for="email">Email:</label><br />
+                <input
+                  type="text"
+                  class="input"
+                  name="email"
+                  id="email"
+                  required
+                  autofocus
+                />
+              </div>
+
+              <div class="form-field">
+                <label for="service">Choose Service:</label><br />
+                <select
+                  name="service"
+                  id="service"
+                  class="drop-down-menu"
+                  required
+                >
+                  <option value="select">--Select--</option>
+                  <% services.forEach((service) => { %>
+                  <option value="'<%= service.value %>'">
+                    <%= service.text %>
+                  </option>
+                  <% }) %>
+                </select>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Adds Footer Partial -->
+    <%- include('_footer.ejs') %>
+  </body>
+</html>

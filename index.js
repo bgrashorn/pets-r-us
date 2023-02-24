@@ -11,8 +11,10 @@
 const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
+const fs = require('fs');
 
 const Customer = require('./models/customers');
+const Appointment = require('./models/appointment');
 
 const app = express();
 
@@ -84,6 +86,13 @@ app.get('/customer-list', (req, res) => {
     })
 });
 
+app.get('/booking', (req, res) => {
+    res.render('booking', {
+        title: 'Pets-R-Us: Booking',
+        pageTitle: 'Pets-R-Us: Booking'
+    })
+});
+
 // Post route
 app.post('/customers', (req, res, next) => {
     console.log(req.body);
@@ -123,6 +132,46 @@ app.get('/customers', (req, res) => {
         }
     })
 })
+
+// Loads in JSON file
+app.get('/appointment', (req, res) => {
+    let jsonFile = fs.readFileSync('./public/data/services.json');
+    let services = JSON.parse(jsonFile);
+
+    console.log(services);
+
+    res.render('booking', {
+        title: 'Pets R Us: Booking',
+        pageTitle: 'Pets R Us: Booking',
+        services: services,
+    });
+});
+
+app.post('/appointment', (req, res, next) => {
+    const newAppointment = new Appointment ({
+        userName: req.body.userName,
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        email: req.body.email,
+        service: req.body.service,
+    });
+
+    console.log(newAppointment);
+
+    Appointment.create(newAppointment, function (err, appointment) {
+        if (err) {
+            console.log(err);
+            next(err);
+        } else {
+            res.render('index', {
+                title: "Pets R Us Home",
+                pageTitle: "Pets R Us Landing"
+            });
+        }
+    });
+});
+
+
 
 // Listen on Port 4000
 app.listen(PORT, () => {
