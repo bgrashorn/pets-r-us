@@ -93,6 +93,7 @@ app.get('/booking', (req, res) => {
     })
 });
 
+
 // Post route
 app.post('/customers', (req, res, next) => {
     console.log(req.body);
@@ -133,27 +134,14 @@ app.get('/customers', (req, res) => {
     })
 })
 
-// Loads in JSON file
-app.get('/appointment', (req, res) => {
-    let jsonFile = fs.readFileSync('./public/data/services.json');
-    let services = JSON.parse(jsonFile);
-
-    console.log(services);
-
-    res.render('booking', {
-        title: 'Pets R Us: Booking',
-        pageTitle: 'Pets R Us: Booking',
-        services: services,
-    });
-});
-
+// POST Route
 app.post('/appointment', (req, res, next) => {
     const newAppointment = new Appointment ({
         userName: req.body.userName,
         firstName: req.body.firstName,
         lastName: req.body.lastName,
         email: req.body.email,
-        service: req.body.service,
+        service: req.body.service
     });
 
     console.log(newAppointment);
@@ -170,6 +158,22 @@ app.post('/appointment', (req, res, next) => {
         }
     });
 });
+
+// Loads in JSON file
+app.get('/appointment', (req, res) => {
+    let jsonFile = fs.readFileSync('./public/data/services.json');
+    let services = JSON.parse(jsonFile);
+
+    console.log(services);
+
+    res.render('booking', {
+        title: 'Pets R Us: Booking',
+        pageTitle: 'Pets R Us: Booking',
+       services: services
+    });
+});
+
+
 
 
 

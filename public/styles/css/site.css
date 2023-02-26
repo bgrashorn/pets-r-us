@@ -86,7 +86,7 @@ hr {
 
 /* Sections */
 
-.info, .hours, .featured-pet, .testimonials, .contact, .grooming-info, .pricing, .training-info, .boarding-info, .registration, .customers-section {
+.info, .hours, .featured-pet, .testimonials, .contact, .grooming-info, .pricing, .training-info, .boarding-info, .registration, .customers-section, .booking {
     text-align: center;
     padding-top: 60px;
     padding-bottom: 60px;
@@ -395,4 +395,65 @@ td {
     position: relative;
     left: 200px;
     color: black;
+}
+
+/* Booking Section */
+.booking {
+    margin: auto;
+    background-color: #E4FDE1;
+    width: 100%;
+    height: 400px;
+}
+
+.booking-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #456990;
+    padding-bottom: 30px;
+}
+
+.booking-card {
+    background-color: white;
+    margin-left: 28%;
+    border-radius: 15px;
+    height: 330px;
+}
+
+label {
+    padding-right: 20px;
+}
+
+.booking-form {
+    margin: auto;
+    line-height: 2;
+}
+
+.booking-button {
+    height: 40px;
+    border-radius: 5px;
+    color: black;
+    background-color: #E4FDE1;
+    font-family: 'Arvo', serif;
+    width: 20%;
+}
+
+.booking-button:hover {
+    background-color: #456990;
+    color: white;
+}
+
+.input, .drop-down-menu {
+    position: relative;
+    float: right;
+}
+
+.drop-down-menu {
+    width: 50%
+}
+
+.booking-label {
+    position: relative;
+    float: left;
 }
