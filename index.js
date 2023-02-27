@@ -169,7 +169,7 @@ app.get('/appointment', (req, res) => {
     res.render('booking', {
         title: 'Pets R Us: Booking',
         pageTitle: 'Pets R Us: Booking',
-       services: services
+        services: services
     });
 });
 
