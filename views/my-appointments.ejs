@@ -1,0 +1,86 @@
+<!--
+======================================
+; Title: my-appointment.ejs 
+; Author: Brett Grashorn
+; Date: 03 Mar 2023
+; Description: This code has the code for the pets-r-us nmy appointments page
+; Sources Used: WEB 200/231/340
+;====================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles/css/site.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Adds Header Partial -->
+    <%- include('_header.ejs') %>
+
+    <section class="my-appointments-section">
+      <div class="card appt-card">
+        <div class="card-title">Check your appointments</div>
+        <div class="card-content">
+          <div class="form">
+            <div form-field>
+              <label for="lastName" class="appt-label">Email Address:</label
+              ><br />
+              <div class="appt-input">
+                <input
+                  type="text"
+                  class="input"
+                  name="email"
+                  id="email"
+                  required
+                />
+              </div>
+            </div>
+            <br />
+            <div class="appt-btn">
+              <input
+                type="submit"
+                value="Search"
+                id="search"
+                class="appt-btn-primary"
+              />
+            </div>
+          </div>
+          <div class="center-div" id="appointments"></div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.getElementById("search").onclick = function () {
+        const email = document.getElementById("email").value;
+
+        fetch("/api/appointments/" + email)
+          .then((res) => res.json())
+          .then((data) => {
+            let tableString = `<br /><h4 style="font-size: 24px; text-align: center; padding-bottom: 10px; font-weight: lighter">My Appointments</h4><table id="appointnments" style="width: 50%;" class="table full-width"><tr><th style="width: 100%;"">First Name</th><th>Last Name</th></tr>`;
+            for (let appointment of data) {
+              tableString += `<tr><td>${appointment.firstName}</td><td>${appointment.lastName}</td></tr>`;
+            }
+            tableString += `</table>`;
+
+            document.getElementById("appointments").innerHTML = tableString;
+          });
+      };
+    </script>
+
+    <!-- Adds Footer Partial -->
+    <%- include('_footer.ejs') %>
+  </body>
+</html>

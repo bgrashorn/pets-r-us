@@ -94,6 +94,7 @@ app.get('/booking', (req, res) => {
 });
 
 
+
 // Post route
 app.post('/customers', (req, res, next) => {
     console.log(req.body);
@@ -134,6 +135,22 @@ app.get('/customers', (req, res) => {
     })
 })
 
+
+
+// Loads in JSON file
+app.get('/appointment', (req, res) => {
+    let jsonFile = fs.readFileSync('./public/data/services.json');
+    let services = JSON.parse(jsonFile);
+
+    console.log(services);
+
+    res.render('booking', {
+        title: 'Pets R Us: Booking',
+        pageTitle: 'Pets R Us: Booking',
+        services: services
+    });
+});
+
 // POST Route
 app.post('/appointment', (req, res, next) => {
     const newAppointment = new Appointment ({
@@ -159,21 +176,23 @@ app.post('/appointment', (req, res, next) => {
     });
 });
 
-// Loads in JSON file
-app.get('/appointment', (req, res) => {
-    let jsonFile = fs.readFileSync('./public/data/services.json');
-    let services = JSON.parse(jsonFile);
-
-    console.log(services);
-
-    res.render('booking', {
-        title: 'Pets R Us: Booking',
-        pageTitle: 'Pets R Us: Booking',
-        services: services
-    });
+app.get('/my-appointments', (req, res) => {
+    res.render('my-appointments', {
+        title: 'Pets-R-Us: My Appointments',
+        pageTitle: 'Pets-R-Us: My Appointments'
+    })
 });
 
-
+app.get('/api/appointments/:email', async(req, res, next) => {
+    Appointment.find({'email': req.params.emails}, function(err, appointments) {
+        if (err) {
+            console.log(err);
+            next(err);
+        } else {
+            res.json(appointments);
+        }
+    })
+})
 
 
 

@@ -34,11 +34,12 @@
         <div class="booking-title">Booking</div>
         <div class="card-content">
           <div class="form-div">
-            <form action="./models/appointment.js" method="post">
+            <form action="/appointment" method="post">
               <div class="form-field booking-form">
                 <label for="userName" class="booking-label">User Name:</label
-                ><br />
-                <input
+                >
+                <div class=" booking-input">
+                  <input
                   type="text"
                   class="input"
                   name="userName"
@@ -46,14 +47,17 @@
                   required
                   autofocus
                 />
+                </div>
+                
               </div>
               </form>
               <br />
             
               <div class="form-field booking-form">
                 <label for="firstName" class="booking-label">First Name:</label
-                ><br />
-                <input
+                >
+                <div class=" booking-input">
+                  <input
                   type="text"
                   class="input"
                   name="firstName"
@@ -61,59 +65,67 @@
                   required
                   autofocus
                 />
+                </div>
+                
               </div>
               <br />
               <div class="form-field booking-form">
                 <label for="lastName" class="booking-label">Last Name:</label
-                ><br />
-                <input
+                >
+                <div class="booking-input">
+                  <input
                   type="text"
                   class="input"
                   name="lastName"
                   id="lastName"
                   required
                   autofocus
-                />
+                /></div>
+                
               </div>
               <br />
               <div class="form-field booking-form">
-                <label for="email" class="booking-label">Email:</label><br />
-                <input
+                <label for="email" class="booking-label">Email:</label>
+                <div class="booking-input">
+                  <input
                   type="text"
                   class="input"
                   name="email"
                   id="email"
                   required
                   autofocus
-                />
+                /></div>
+                
               </div>
               <br />
               <div class="form-field booking-form">
                 <label for="service" class="booking-label"
                   >Choose Service:</label
-                ><br />
-
-                <select
-                  name="service"
-                  id="service"
-                  class="drop-down-menu"
-                  required
                 >
-                  <option value="select">--Select--</option>
-                  <% services.forEach((service) => { %>
-                  <option value="'<%= service.value %>'">
-                    <%= service.text %>
-                  </option>
-                  <% }) %>
+              <div>
+                <select
+                     name="service"
+                     id="service"
+                     class="booking-input"
+                     required
+                              >                   
+                     <option value="select">--Select--</option>
+                     <% services.forEach((service) => { %>
+                     <option value="'<%= service.value %>'">
+                       <%= service.text %>
+                     </option>
+                     <% }) %>
                 </select>
+              </div>
+                
 
-                <div class="booking-form">
+                <div class="booking-form book-btn-div">
                   <!-- submit data button -->
                   <button
                     type="submit"
                     class="booking-button"
                     id="btnSubmit"
-                    value="Pets-R-Us Appointment"
+                    value="Pets-R-Us: Appointment"
                   >
                     Submit
                   </button>

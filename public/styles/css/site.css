@@ -86,7 +86,7 @@ hr {
 
 /* Sections */
 
-.info, .hours, .featured-pet, .testimonials, .contact, .grooming-info, .pricing, .training-info, .boarding-info, .registration, .customers-section, .booking {
+.info, .hours, .featured-pet, .testimonials, .contact, .grooming-info, .pricing, .training-info, .boarding-info, .registration, .customers-section, .booking, .my-appointments-section {
     text-align: center;
     padding-top: 60px;
     padding-bottom: 60px;
@@ -375,7 +375,7 @@ footer p {
     margin: auto;
     background-color: #E4FDE1;
     width: 100%;
-    height: 400px;
+    height: 450px;
 }
 
 .customer-card {
@@ -402,7 +402,7 @@ td {
     margin: auto;
     background-color: #E4FDE1;
     width: 100%;
-    height: 400px;
+    height: 600px;
 }
 
 .booking-title {
@@ -418,16 +418,25 @@ td {
     background-color: white;
     margin-left: 28%;
     border-radius: 15px;
-    height: 400px;
+    height: 600px;
 }
 
 label {
     padding-right: 20px;
+    
 }
 
 .booking-form {
     margin: auto;
     line-height: 2;
+}
+
+.booking-input {
+    margin-bottom: 18px;
+}
+
+.book-btn-div {
+    padding-top: 40px;
 }
 
 .booking-button {
@@ -436,7 +445,7 @@ label {
     color: black;
     background-color: #E4FDE1;
     font-family: 'Arvo', serif;
-    width: 20%;
+    width: 40%;
 }
 
 .booking-button:hover {
@@ -458,3 +467,52 @@ label {
     position: relative;
     float: left;
 }
+
+/* My Appointments Section */
+.my-appointments-section {
+    margin: auto;
+    background-color: #E4FDE1;
+    width: 100%;
+    height: 800px;
+}
+
+.appt-card {
+    background-color: white;
+    margin-left: 28%;
+    border-radius: 15px;
+    height: 600px;
+}
+
+.appt-label {
+    float: left;
+    padding-top: 55px;
+    padding-left: 250px;
+}
+
+.appt-input {
+    float: right;
+    padding-top: 30px;
+    padding-right: 250px;
+}
+
+.appt-btn {
+    padding-top: 60px;
+    padding-left: 30px;
+}
+
+.appt-btn-primary {
+    width: 20%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    color: white;
+    background-color: #456990;
+    font-family: 'Arvo', serif;
+}
+.appt-btn-primary:hover {
+    background-color: #E4FDE1;
+    color: black;
+}
+ .center-div {
+    margin: auto;
+ }
